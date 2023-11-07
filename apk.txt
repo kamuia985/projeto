@@ -1,0 +1,54 @@
+**** 1º Parte
+	Atualizar o node.js
+
+*** 2º Parte
+	Criar conta no expo.dev
+
+*** 3º Atulaizar o npm
+	npm update -g
+	
+*** 3º Parte
+	Configurar sua máquina e vincular a conta expo.dev
+	npm update
+	1- Instalar a CLI EAS mais recente
+		npm install --global eas-cli
+
+	2 - Inicie sessão na sua conta Expo
+		eas login
+		'-> agora vai pedir seu usuário e senha da conta expo
+		
+		OBS: verifique se deu certo o login
+		eas whoami
+		
+	3 - Criar um App	
+		npx create-expo-app
+		
+		espere o App ser criado
+	
+	4 - Entre no App
+		cd Nome_App
+		code .
+		
+	5 - Agora que você já está dentro de seu projeto e já abriu o vscode,
+		o próximo passo é atualizar o expo.
+		
+		npx expo install expo-updates
+		
+	6 - Prepare seu projeto para fazer a build (criar o apk)
+		eas update:configure
+		eas build:configure
+		
+		
+	7 - Criar a apk (Executar uma compilação com o perfil de compilação interno)
+		eas build --profile preview --platform android
+	
+	8 - Criar um versão para publicar na App Store
+		eas build --profile production --platform android
+		
+		
+REFERÊNCIAS
+
+https://docs.expo.dev/eas-update/getting-started/#log-in-to-your-expo-account
+https://docs.expo.dev/build/internal-distribution/#setting-up-internal-distribution
+https://docs.expo.dev/build/setup/
+https://docs.expo.dev/versions/latest/sdk/location/
